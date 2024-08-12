@@ -12,7 +12,7 @@ public class ProductoResponse {
     private int idproducto;
     private String nombreProducto;
     private String clasificacion;
-    private double cantidadDisponible;
+    private double cantidaDisponible;
     private String localizacion;
     private double precio;
     private UnidComercializacion unid;

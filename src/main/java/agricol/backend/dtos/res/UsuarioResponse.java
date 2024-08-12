@@ -15,6 +15,5 @@ public class UsuarioResponse {
     private String apellido;
     private String direccion;
     private String email;
-    private int telefono;
     private Rol rol; //DEbo cambiar por el RolREsponse
 }

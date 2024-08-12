@@ -15,7 +15,8 @@ public class TransaccionResponse {
     private int idTransaccion;
     private String medioDePago;
     private LocalDate fecha;
-    private UsuarioResponse usuarioVendedorId;
-    private UsuarioResponse usuarioCompradorId;
+    private Double total;
+    private String usuarioVendedorId;
+    private String usuarioCompradorId;
     private List<ProductoInTransaccionResponse> listaProductosTransacciones;
 }

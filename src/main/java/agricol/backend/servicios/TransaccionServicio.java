@@ -105,8 +105,8 @@ public class TransaccionServicio implements ServicioAbstracto<TransaccionRequest
     public TransaccionResponse convertTransaccionToResponse(Transaccion transaccion) {
         TransaccionResponse response = new TransaccionResponse();
         BeanUtils.copyProperties(transaccion, response);
-        response.setUsuarioCompradorId(convertUsuarioToResponse(transaccion.getUsuarioComprador()));
-        response.setUsuarioVendedorId(convertUsuarioToResponse(transaccion.getUsuarioVendedor()));
+        response.setUsuarioCompradorId(convertUsuarioToResponse(transaccion.getUsuarioComprador()).getNombre());
+        response.setUsuarioVendedorId(convertUsuarioToResponse(transaccion.getUsuarioVendedor()).getNombre());
         response.setListaProductosTransacciones(transaccion.getListaTransacciones().stream().map(e -> {
             ProductoInTransaccionResponse newResponse = convertProductoInTransaccionToResponse(e);
             newResponse.setProducto(convertProductoToResponseBasic(e.getProducto()));
